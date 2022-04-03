@@ -1,0 +1,74 @@
+.Menu {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 690px;
+  margin: 0 auto;
+
+  background-image: url("https://i.imgur.com/cPlFBJF.jpg");
+  background-size: cover;
+  justify-content: center;
+}
+
+.Menu .title {
+  color: rgb(240, 118, 3);
+  font-size: 72px;
+  font-family: "Courier New", Courier, monospace;
+  -webkit-text-stroke: 2px rgb(112, 46, 3);
+  align-items: center;
+  display: flex;
+  font-weight: 1000;
+  flex-direction: column;
+  height: 100px;
+}
+.Menu button {
+}
+
+.btn--menu--container {
+  display: flex;
+  flex-direction: column;
+}
+.Menu .btn--menu--container .button {
+  position: relative;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 10px;
+  transition: transform 200ms;
+}
+.Menu .btn--menu--container .button img {
+}
+.Menu .btn--menu--container .button label {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: rgb(240, 118, 3);
+  font-size: 30px;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bolder;
+  word-spacing: -10px;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+
+  -webkit-text-stroke: 1px rgb(128, 53, 3);
+}
+.Menu .btn--menu--container .button:hover {
+  transform: scale(1.1);
+  cursor: pointer !important;
+}
+.skin-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+.skin-container .radio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
