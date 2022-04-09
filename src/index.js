@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from ".//routes/App";
+import Login from ".//routes/Login";
+import Register from ".//routes/Register";
 import ScoreBoard from ".//routes/ScoreBoard";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -12,6 +14,8 @@ ReactDOM.render(
       <Routes>
         <Route path="scoreboard" element={<ScoreBoard />} />
         <Route path="menu" element={<Menu />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
         <Route path="/" element={<App />} />
       </Routes>
     </BrowserRouter>

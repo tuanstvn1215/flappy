@@ -1,0 +1,105 @@
+.Register {
+  width: 500px;
+  height: 690px;
+  margin: 0 auto;
+
+  background-image: url("https://i.imgur.com/cPlFBJF.jpg");
+  background-size: cover;
+}
+.return--btn {
+  position: absolute;
+  background-image: url("https://i.imgur.com/ZrTaauC.png");
+  width: 45px;
+  height: 30px;
+  margin-left: 20px;
+  margin-top: 20px;
+  justify-self: center;
+  align-items: center;
+  display: flex;
+  background-position: center;
+  border-radius: 2px;
+  border: 1px solid rgb(142, 90, 0);
+  cursor: pointer;
+  transition: transform 100ms;
+  z-index: 999;
+}
+.register--btn {
+  position: absolute;
+  background-image: url("https://i.imgur.com/ZrTaauC.png");
+  width: 90px;
+  height: 30px;
+  margin-left: 400px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-position: center;
+  border-radius: 2px;
+  border: 1px solid rgb(142, 90, 0);
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+  transition: transform 100ms;
+  z-index: 999;
+}
+.return--btn:hover {
+  transform: scale(1.05);
+}
+.register--btn:hover {
+  transform: scale(1.05);
+}
+.Login--container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: inherit;
+  height: inherit;
+}
+.Login--img {
+}
+.Login--form {
+  z-index: 5;
+  position: absolute;
+}
+.Login--form--title {
+  color: white;
+  height: 30px;
+}
+.Login--input--container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 250px;
+  margin-top: 5px;
+}
+.Login--form label {
+  color: white;
+}
+.Login--form input {
+  width: 120px;
+}
+.Login--btn--container {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+.Login--btn {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid rgb(58, 37, 1);
+  cursor: pointer;
+  background-color: rgb(238, 205, 57);
+}
+.Login--btn:hover {
+  background-color: rgb(204, 167, 4);
+}

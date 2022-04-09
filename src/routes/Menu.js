@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
+
+import config from "../config";
 import "./Menu.css";
 export default function Menu(props) {
+  const [logindetail, setlogindetail] = useState({
+    status: false,
+    username: "",
+  });
   const [LinkSkin, setLinkSkin] = useState([
     {
       link: "https://file1.dangcongsan.vn/DATA/0/2018/10/68___gi%E1%BA%BFng_l%C3%A0ng_qu%E1%BA%A3ng_ph%C3%BA_c%E1%BA%A7u__%E1%BB%A9ng_h%C3%B2a___%E1%BA%A3nh_vi%E1%BA%BFt_m%E1%BA%A1nh-16_51_07_908.jpg",
@@ -13,11 +19,44 @@ export default function Menu(props) {
     },
   ]);
 
-  function handleClickStart() {
+  useEffect(async () => {
+    const requestOptions = {
+      method: "get",
+      headers: { "Content-Type": "Application/x-www-form-urlencoded" },
+      credentials: "include",
+    };
+
+    let res = await fetch(
+      config.host + "/login/checkcookie",
+      requestOptions
+    ).then((response) => response.json());
+
+    if (res.code === 1)
+      setlogindetail({ status: true, username: res.username });
+  }, []);
+  async function handleClickStart() {
     localStorage.setItem("player-skin", "https://i.imgur.com/DznCJPN.png");
     document.location.replace("/");
   }
+  // async function handleClickLogout(params) {
+  //   const requestOptions = {
+  //     method: "get",
+  //     credentials: "include",
+  //   };
+  //   let res = await fetch(config.host + "/login/login", requestOptions).then(
+  //     (response) => response.json()
+  //   );
+
+  //   if (res.code === 0) alert("Lỗi: " + res.message);
+  //   if (res.code === 1) {
+  //     alert("Đăng nhập thành công");
+  //     document.location.replace("/menu");
+  //   }
+  // }
   function handleClickChooseSkin() {}
+  function handleClickLogin() {
+    document.location.replace("/Login");
+  }
   function handleClickScoreBoard() {
     document.location.replace("/scoreboard");
   }
@@ -26,7 +65,9 @@ export default function Menu(props) {
       <audio>
         <source scr="https://cloud1.usaupload.com/6fPW/MusicEditorvzh3kqkt.bwp_(4).mp3?download_token=63aaefb1e25fe99c534d935824f53f09a18872c34ef0394d396b1f87797c2f2d" />
       </audio>
-
+      <div className="welcome--container">
+        <div className="welcome--content">Xin Chào {logindetail.username}</div>
+      </div>
       <div className="title">Flappy Pig</div>
       <div className="btn--menu--container">
         <div className="button" onClick={handleClickStart}>
@@ -37,7 +78,7 @@ export default function Menu(props) {
           <img src="https://i.imgur.com/ZrTaauC.png" alt="" width="180px" />
           <label>Bảng Điểm</label>
         </div>
-        <div className="button" onClick={handleClickStart}>
+        <div className="button" onClick={handleClickLogin}>
           <img src="https://i.imgur.com/ZrTaauC.png" alt="" width="180px" />
           <label>Đăng Nhập</label>
         </div>
@@ -58,6 +99,11 @@ export default function Menu(props) {
             );
           })}
         </div> */}
+      </div>
+      <div className="test">
+        <div className="test2">
+          <div className="test2"></div>
+        </div>
       </div>
     </div>
   );

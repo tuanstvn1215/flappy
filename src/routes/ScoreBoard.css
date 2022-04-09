@@ -2,12 +2,29 @@
   width: 500px;
   height: 690px;
   margin: 0 auto;
-
+position: relative;
   background-image: url("https://i.imgur.com/cPlFBJF.jpg");
   background-size: cover;
-  justify-content: center;
+  
 }
+.return--btn{
+  position: absolute;
+  background-image: url('https://i.imgur.com/ZrTaauC.png');
+  width: 45px;
+  height: 30px;
+  margin-left: 20px;
+  margin-top: 20px;
+ justify-self: center;
+ align-items: center;
+ display: flex;
+  background-position: center;
+border-radius: 2px;
+border: 1px solid rgb(142, 90, 0);
+cursor: pointer ;
+transition: transform 100ms;
 
+}
+.return--btn:hover{transform: scale(1.05);}
 .title {
   color: rgb(240, 118, 3);
   font-size: 72px;
@@ -16,7 +33,7 @@
   align-items: center;
   display: flex;
   font-weight: 1000;
-  padding-top: 30px;
+  padding-top: 50px;
   flex-direction: column;
   height: 100px;
 }
